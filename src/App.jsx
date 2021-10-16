@@ -1,4 +1,4 @@
-import Header from "./components/navbar/Header";
+import Layout from "./components/layout/Layout";
 import GlobalStyles from "./GlobalStyles";
 import HomePage from "./pages/HomePage";
 
@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="App">
 		<GlobalStyles />
-		<Header />
-      <HomePage />
+		<Layout>
+			<HomePage />
+		</Layout>
     </div>
   );
 }
