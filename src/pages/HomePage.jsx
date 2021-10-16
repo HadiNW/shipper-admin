@@ -1,10 +1,15 @@
 import React from 'react'
-import { HomeStyles } from '../components/styles/HomeStyles'
+import styled from 'styled-components'
+import HomeHeader from '../components/home-header/HomeHeader'
+
+const HomeStyles = styled.div`
+	padding: 2rem;
+`
 
 const HomePage = () => {
 	return (
 		<HomeStyles>
-			<h1>Home</h1>
+			<HomeHeader />
 		</HomeStyles>
 	)
 }

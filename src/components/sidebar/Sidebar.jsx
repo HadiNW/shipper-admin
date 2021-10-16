@@ -4,7 +4,7 @@ import { MenuItem, MenuList, SidebarStyles } from './SidebarStyles'
 const Sidebar = () => {
 	return (
 		<SidebarStyles>
-			{/* <MenuList> */}
+			<MenuList>
 				<MenuItem>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -56,7 +56,7 @@ const Sidebar = () => {
 					</svg>
 					<p>Menu Name</p>
 				</MenuItem>
-			{/* </MenuList> */}
+			</MenuList>
 		</SidebarStyles>
 	)
 }
