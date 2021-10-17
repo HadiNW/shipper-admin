@@ -20,7 +20,7 @@ const Sidebar = () => {
 							d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
 						/>
 					</svg>
-					<p>Menu Name</p>
+					<p>Beranda</p>
 				</MenuItem>
 				<MenuItem>
 					<svg
@@ -37,7 +37,7 @@ const Sidebar = () => {
 							d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
 						/>
 					</svg>
-					<p>Menu Name</p>
+					<p>Driver Management</p>
 				</MenuItem>
 				<MenuItem>
 					<svg
@@ -54,7 +54,7 @@ const Sidebar = () => {
 							d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
 						/>
 					</svg>
-					<p>Menu Name</p>
+					<p>Pickup</p>
 				</MenuItem>
 			</MenuList>
 		</SidebarStyles>

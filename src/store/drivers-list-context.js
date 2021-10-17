@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react"
 import AxiosInstance from "../axios/axios"
-import { useHistory, useParams, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const DriversListContext = createContext({
 	drivers: [],
@@ -9,12 +9,14 @@ const DriversListContext = createContext({
 	shownDrivers: [],
 	getDrivers: () => {},
 	getPaginationData: () => {},
-	getSearchedDrivers: () => {}
+	getSearchedDrivers: () => {},
+	resetSearch: () => {},
 })
 
 export const DriversListProvider = (props) => {
 	const [drivers, setDerivers] = useState([])
 	const [shownDrivers, setShownDrivers] = useState([])
+	const [searchedDrivers, setSearchedDrivers] = useState([])
 	const [isFetching, setIsFetching] = useState(false)
 	const [error, setError] = useState(null)
 
@@ -82,8 +84,14 @@ export const DriversListProvider = (props) => {
 	}
 
 	const getSearchedDrivers = (keyword) => {
-		const result = drivers.filter(driver => driver.firstName.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()))
+		const result = getLocalDriversData().filter(driver => driver.firstName.toLocaleLowerCase().includes(keyword.toLocaleLowerCase()))
+		setDerivers(result)
 		setShownDrivers(result)
+	}
+
+	const resetSearch = () => {
+		const localData = getLocalDriversData()
+		setDerivers(localData)
 	}
 
 	return <DriversListContext.Provider value={{
@@ -93,6 +101,8 @@ export const DriversListProvider = (props) => {
 		error,
 		getDrivers,
 		getPaginationData,
+		getSearchedDrivers,
+		resetSearch,
 		
 	}}>
 		{props.children}
