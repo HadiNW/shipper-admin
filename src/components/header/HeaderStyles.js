@@ -27,7 +27,7 @@ export const AccountStyles = styled.div`
 	}
 
 	.user-icon-container {
-		width: 3.5rem;
+		width: 3rem;
 		margin-left: 1rem;
 		.user-icon {
 			width: 100%;
