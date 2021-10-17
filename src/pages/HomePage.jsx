@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import driverContext from '../store/drivers-list-context'
 import styled from 'styled-components'
 import DriverList from '../components/driver-list/DriverList'
@@ -10,9 +11,13 @@ const HomeStyles = styled.div`
 
 const HomePage = () => {
 	const ctx = useContext(driverContext)
+	const location = useLocation()
+	const queryParams = new URLSearchParams(location.search)
+	const page = Number(queryParams.get('page')) 
 
 	useEffect(() => {
 		ctx.getDrivers()
+		ctx.getPaginationData(page)
 	}, [])
 	return (
 		<HomeStyles>

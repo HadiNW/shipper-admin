@@ -5,6 +5,10 @@ import {
 	Dot,
 	OptionDot,
 	CardContent,
+	CardText,
+	TextTitle,
+	TextContent,
+	CardContainer,
 } from './CardStyles'
 
 const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
@@ -22,27 +26,28 @@ const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
 			</CardHeaderStyles>
 			<CardContent>
 				<div className='avatar-container'>
-					<img src={avatar} className='avatar-img' alt="avatar" />
+					<img src={avatar} className='avatar-img' alt='avatar' />
 				</div>
+				<CardText>
+					<TextTitle>Nama Driver</TextTitle>
+					<TextContent>
+						{firstName}, {lastName}
+					</TextContent>
+				</CardText>
+				<CardText>
+					<TextTitle>Telepon</TextTitle>
+					<TextContent>{phone}</TextContent>
+				</CardText>
+
+				<CardText>
+					<TextTitle>Email</TextTitle>
+					<TextContent>{email}</TextContent>
+				</CardText>
+				<CardText>
+					<TextTitle>Tanggal Lahir</TextTitle>
+					<TextContent>{dob}</TextContent>
+				</CardText>
 			</CardContent>
-			<div className='name'>
-				<p className='title'>Nama Driver</p>
-				<p>
-					{firstName}, {lastName}
-				</p>
-			</div>
-			<div className='phone'>
-				<p className='title'>Telepon</p>
-				<p>{phone}</p>
-			</div>
-			<div className='email'>
-				<p className='title'>Email</p>
-				<p>{email}</p>
-			</div>
-			<div className='dob'>
-				<p className='title'>Tanggal Lahir</p>
-				<p>{dob}</p>
-			</div>
 		</CardStyles>
 	)
 }

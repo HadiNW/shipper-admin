@@ -9,7 +9,7 @@ export const HeaderStyles = styled.header`
 `
 
 export const Logo = styled.div`
-	height: 3.5rem;
+	height: 2.5rem;
 	.logo {
 		width: 100%;
 		height: 100%;

@@ -12,20 +12,22 @@ const GlobalStyles = createGlobalStyle`
 		--offWhite: #ededed;
 		--bg: #FAFAFA;
 		--dark: #060606;
-		box-sizing: border-box;
 		font-size: 62.5%;
+		box-sizing: border-box;
+
 	}
 
 	*, *::before, *::after {
 		margin: 0;
 		padding: 0;
-		box-sizing: inherit;
+		box-sizing: border-box;
 	}
 
 	body {
 		font-family: 'Roboto', sans-serif;
 		font-size: 1.6rem;
 		color: var(--black);
+		box-sizing: border-box;
 	}
 
 	a {

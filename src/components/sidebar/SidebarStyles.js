@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const SidebarStyles = styled.div`
-	flex: 15%;
+	flex: 20%;
+	flex-shrink: 0;
 	min-height: calc(100vh - 8rem);
 `
 
