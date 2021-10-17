@@ -42,10 +42,11 @@ export const OptionDot = styled.div`
 export const CardContent = styled.div`
 	.avatar-container {
 		width: 10rem;
-		.avatar {
+		.avatar-img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			border-radius: 100%;
 		}
 	}
 `

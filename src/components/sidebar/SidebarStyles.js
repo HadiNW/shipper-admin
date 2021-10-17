@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarStyles = styled.div`
 	flex: 15%;
-	height: 100vh;
+	min-height: calc(100vh - 8rem);
 `
 
 export const MenuList = styled.ul`

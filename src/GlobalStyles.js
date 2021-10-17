@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
 		--lightOrange: #ff5f53;
 		--lightGrey: #969696;
 		--offWhite: #ededed;
+		--bg: #FAFAFA;
+		--dark: #060606;
 		box-sizing: border-box;
 		font-size: 62.5%;
 	}

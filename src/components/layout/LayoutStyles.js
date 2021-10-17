@@ -4,6 +4,6 @@ export const LayoutStyles = styled.div`
 	display: flex;
 	main.main {
 		flex-basis: 85%;
-		background-color: #ccc;
+		background-color: var(--bg);
 	}
 `
