@@ -1,11 +1,19 @@
 import React from 'react'
-import { CardStyles, CardHeaderStyles, Dot, OptionDot, CardContent } from './CardStyles'
+import {
+	CardStyles,
+	CardHeaderStyles,
+	Dot,
+	OptionDot,
+	CardContent,
+} from './CardStyles'
 
-const Card = () => {
+const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
 	return (
 		<CardStyles>
 			<CardHeaderStyles>
-				<p className="driver-id">Driver ID <span>87754YY</span></p>
+				<p className='driver-id'>
+					Driver ID <span>{id || 'N/A'}</span>
+				</p>
 				<OptionDot>
 					<Dot />
 					<Dot />
@@ -13,27 +21,27 @@ const Card = () => {
 				</OptionDot>
 			</CardHeaderStyles>
 			<CardContent>
-				<div className="avatar-container">
-				<svg xmlns="http://www.w3.org/2000/svg" className="avatar-img" viewBox="0 0 20 20" fill="currentColor">
-  					<path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-				</svg>
+				<div className='avatar-container'>
+					<img src={avatar} className='avatar-img' alt="avatar" />
 				</div>
 			</CardContent>
-			<div className="name">
-				<p className="title">Nama Driver</p>
-				<p>Firstname, Lastname</p>
+			<div className='name'>
+				<p className='title'>Nama Driver</p>
+				<p>
+					{firstName}, {lastName}
+				</p>
 			</div>
-			<div className="phone">
-				<p className="title">Telepon</p>
-				<p>000000</p>
+			<div className='phone'>
+				<p className='title'>Telepon</p>
+				<p>{phone}</p>
 			</div>
-			<div className="email">
-				<p className="title">Email</p>
-				<p>Firstdfhb@f.cpm</p>
+			<div className='email'>
+				<p className='title'>Email</p>
+				<p>{email}</p>
 			</div>
-			<div className="dob">
-				<p className="title">Tanggal Lahir</p>
-				<p>2012-09-09</p>
+			<div className='dob'>
+				<p className='title'>Tanggal Lahir</p>
+				<p>{dob}</p>
 			</div>
 		</CardStyles>
 	)
