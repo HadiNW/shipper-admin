@@ -66,7 +66,7 @@ export const DriversListProvider = (props) => {
 	}
 
 	const getDriversFromApi = async () => {
-		const { data } = await AxiosInstance.get('/', {params: {results: 30}})
+		const { data } = await AxiosInstance.get('/', {params: {results: 32}})
 		const payload = data.results.map(result => ({
 			id: result.id.value,
 			firstName: result.name.first,

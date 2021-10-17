@@ -20,7 +20,12 @@ const DriverList = ({ drivers }) => {
 
 	const ctx = useContext(DriversListContext)
 
+	const totalData = ctx.drivers.length
+	const isLast = (currPage * 5) >= totalData
+
 	const getNextPage = () => {
+		console.log(totalData - (currPage * 5))
+		if (isLast) return
 		let page = 2
 		if (currPage && currPage > 0) {
 			page = currPage + 1
@@ -36,7 +41,6 @@ const DriverList = ({ drivers }) => {
 		}
 		console.log(page)
 		history.push('/?page=' + page)
-		// ctx.getPaginationData(page)
 	}
 	return (
 		<>
@@ -75,7 +79,7 @@ const DriverList = ({ drivers }) => {
 					<Text disabled={currPage <= 1}>Previous Page</Text>
 				</Container>
 				<Container onClick={getNextPage}>
-					<Text>Next Page</Text>
+					<Text disabled={isLast}>Next Page</Text>
 					<Icon
 						xmlns='http://www.w3.org/2000/svg'
 						className='h-6 w-6'
