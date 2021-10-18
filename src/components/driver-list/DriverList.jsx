@@ -11,6 +11,7 @@ import {
 
 import { useHistory, useLocation } from 'react-router-dom'
 import DriversListContext from '../../store/drivers-list-context'
+import Spinner from '../spinner/Spinner'
 
 const DriverList = ({ drivers }) => {
 	const history = useHistory()
@@ -43,8 +44,8 @@ const DriverList = ({ drivers }) => {
 	return (
 		<>
 			<DriverListStyles>
-				<DriverListContainer>
-					{drivers.slice(0,40).map((driver, i) => (
+				{!ctx.isFetching ? <DriverListContainer>
+					{drivers.map((driver, i) => (
 						<Card
 							key={driver.id || i + driver.firstName || i}
 							id={driver.id}
@@ -56,7 +57,7 @@ const DriverList = ({ drivers }) => {
 							avatar={driver.avatar}
 						/>
 					))}
-				</DriverListContainer>
+				</DriverListContainer> : <Spinner />}
 			</DriverListStyles>
 			<PaginationStyles>
 				<Container onClick={getPreviousPage}>

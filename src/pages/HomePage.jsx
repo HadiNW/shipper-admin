@@ -4,6 +4,7 @@ import driverContext from '../store/drivers-list-context'
 import styled from 'styled-components'
 import DriverList from '../components/driver-list/DriverList'
 import HomeHeader from '../components/home-header/HomeHeader'
+import Spinner from '../components/spinner/Spinner'
 
 const HomeStyles = styled.div`
 	flex-basis: 80%;
