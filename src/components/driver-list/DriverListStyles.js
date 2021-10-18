@@ -1,16 +1,12 @@
 import styled from "styled-components";
 
 export const DriverListStyles = styled.div`
-	width: 100rem;
+	margin-top: 3rem;
 `
 export const DriverListContainer = styled.div`
 	display: flex;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	margin-top: 3rem;
-	padding: 1rem;
-	width: 95%;
-	padding: 0rem;
+	overflow-x: auto;
+	flex-wrap: nowrap;
 `
 
 export const PaginationStyles = styled.div`

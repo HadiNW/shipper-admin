@@ -46,7 +46,7 @@ const DriverList = ({ drivers }) => {
 		<>
 			<DriverListStyles>
 				<DriverListContainer>
-					{drivers.map((driver) => (
+					{drivers.slice(0,40).map((driver, i) => (
 						<Card
 							key={driver.id + driver.firstName}
 							id={driver.id}

@@ -6,18 +6,16 @@ import { Route, Switch } from 'react-router-dom'
 
 function App() {
 	return (
-		<div className='App'>
+		<>
 			<GlobalStyles />
 			<Layout>
-				<>
 					<Switch>
 						<Route path='/' exact>
 							<HomePage />
 						</Route>
 					</Switch>
-				</>
 			</Layout>
-		</div>
+		</>
 	)
 }
 

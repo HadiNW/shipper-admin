@@ -6,7 +6,10 @@ import DriverList from '../components/driver-list/DriverList'
 import HomeHeader from '../components/home-header/HomeHeader'
 
 const HomeStyles = styled.div`
+	flex-basis: 80%;
 	padding: 2rem;
+	overflow: hidden;
+	background-color: var(--bg);
 `
 
 const HomePage = () => {

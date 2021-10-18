@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const CardStyles = styled.div`
 	background-color: #fff;
-	flex-basis: 30rem;
-	flex-shrink: 0;
-	flex-grow: 0;
+	flex: 0 0 30rem;
+	/* flex-basis: 30rem; */
+	/* min-width: 30rem; */
 	cursor: pointer;
 	&:not(:last-of-type) {
 		margin-right: 4rem;

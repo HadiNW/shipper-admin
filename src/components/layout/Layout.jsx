@@ -9,9 +9,9 @@ const Layout = (props) => {
 			<Header />
 			<LayoutStyles>
 				<Sidebar />
-				<main className="main">
+				{/* <main className="main"> */}
 					{props.children}
-				</main>
+				{/* </main> */}
 			</LayoutStyles>
 		</>
 	)
