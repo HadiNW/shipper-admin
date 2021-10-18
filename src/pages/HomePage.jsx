@@ -10,6 +10,9 @@ const HomeStyles = styled.div`
 	padding: 2rem;
 	overflow: hidden;
 	background-color: var(--bg);
+	@media(max-width: 890px) {
+		flex-basis: 100%;
+	}
 `
 
 const HomePage = () => {

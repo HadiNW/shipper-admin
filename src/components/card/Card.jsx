@@ -28,25 +28,27 @@ const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
 				<div className='avatar-container'>
 					<img src={avatar} className='avatar-img' alt='avatar' />
 				</div>
-				<CardText>
-					<TextTitle>Nama Driver</TextTitle>
-					<TextContent>
-						{firstName}, {lastName}
-					</TextContent>
-				</CardText>
-				<CardText>
-					<TextTitle>Telepon</TextTitle>
-					<TextContent>{phone}</TextContent>
-				</CardText>
+				<div className='content-container'>
+					<CardText>
+						<TextTitle>Nama Driver</TextTitle>
+						<TextContent>
+							{firstName}, {lastName}
+						</TextContent>
+					</CardText>
+					<CardText>
+						<TextTitle>Telepon</TextTitle>
+						<TextContent>{phone}</TextContent>
+					</CardText>
 
-				<CardText>
-					<TextTitle>Email</TextTitle>
-					<TextContent>{email}</TextContent>
-				</CardText>
-				<CardText>
-					<TextTitle>Tanggal Lahir</TextTitle>
-					<TextContent>{dob}</TextContent>
-				</CardText>
+					<CardText>
+						<TextTitle>Email</TextTitle>
+						<TextContent>{email}</TextContent>
+					</CardText>
+					<CardText>
+						<TextTitle>Tanggal Lahir</TextTitle>
+						<TextContent>{dob}</TextContent>
+					</CardText>
+				</div>
 			</CardContent>
 		</CardStyles>
 	)

@@ -7,7 +7,7 @@ const Sidebar = () => {
 	return (
 		<SidebarStyles>
 			<MenuList>
-				<MenuItem to='/dashboard' active={location.pathname === '/dashboard'}>
+				<MenuItem to='/dashboard' $active={location.pathname === '/dashboard'}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='menu-icon'
@@ -24,7 +24,7 @@ const Sidebar = () => {
 					</svg>
 					<p>Dashboard</p>
 				</MenuItem>
-				<MenuItem to='/' active={location.pathname === '/'}>
+				<MenuItem to='/' $active={location.pathname === '/'}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='menu-icon'
@@ -41,7 +41,7 @@ const Sidebar = () => {
 					</svg>
 					<p>Driver Management</p>
 				</MenuItem>
-				<MenuItem to='/pickup' active={location.pathname === '/pickup'}>
+				<MenuItem to='/pickup' $active={location.pathname === '/pickup'}>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='menu-icon'

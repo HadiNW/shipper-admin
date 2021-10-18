@@ -6,6 +6,11 @@ export const HomeHeaderStyles = styled.div`
 	align-items: center;
 	padding: 2rem;
 	background-color: #fff;
+	@media(max-width: 890px) {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
 
 	.left-header {
 		.title {
@@ -17,10 +22,19 @@ export const HomeHeaderStyles = styled.div`
 			color: var(--grey);
 			margin-top: .5rem;
 		}
+		@media(max-width: 890px) {
+			width: 100%;
+		}
 	}
 	.right-header {
 		display: flex;
 		align-items: center;
+		@media(max-width: 890px) {
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			margin-top: 2rem;
+		}
 		.input {
 			margin-right: 1rem;
 			display: flex;
@@ -29,6 +43,10 @@ export const HomeHeaderStyles = styled.div`
 			border-radius: .5rem;
 			color: var(--lightGrey);
 			font-size: 1.5rem;
+			@media(max-width: 890px) {
+				justify-content: flex-start;
+				width: 100%;
+			}
 		}
 		.search-icon {
 			width: 2rem;
@@ -40,6 +58,7 @@ export const HomeHeaderStyles = styled.div`
 			color: var(--lightGrey);
 			font-size: 1.5rem;
 			border: none;
+			width: 100%;
 		}
 		.add-button {
 			padding:  1rem 0.5rem;
@@ -59,6 +78,10 @@ export const HomeHeaderStyles = styled.div`
 			.button-icon {
 				width: 2rem;
 				margin-left: 1rem;
+			}
+			@media(max-width: 890px) {
+				width: 100%;
+				margin-top: 1rem;
 			}
 			
 		}

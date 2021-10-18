@@ -3,20 +3,22 @@ import styled from "styled-components";
 export const CardStyles = styled.div`
 	background-color: #fff;
 	flex: 0 0 30rem;
-	/* flex-basis: 30rem; */
-	/* min-width: 30rem; */
 	cursor: pointer;
 	&:not(:last-of-type) {
 		margin-right: 4rem;
+		@media(max-width: 890px) {
+			margin-right: 0;
+			margin-bottom: 4rem;
+			flex: 1;
+		}
 	}
 `
 
 export const CardHeaderStyles = styled.div`
 	display: flex;
-	/* flex-wrap: nowrap; */
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 2px solid var(--lightGrey);
+	border-bottom: 2px solid var(--grey);
 	padding: 1rem 2rem;
 	.driver-id {
 		color: var(--grey);
@@ -53,6 +55,17 @@ export const CardContent = styled.div`
 			height: 100%;
 			object-fit: cover;
 			border-radius: 100%;
+		}
+	}
+	@media(max-width: 890px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.avatar-container {
+			flex-basis: 30%;
+		}
+		.content-container {
+			flex-basis: 50%;
 		}
 	}
 `

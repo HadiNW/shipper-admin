@@ -7,6 +7,11 @@ export const DriverListContainer = styled.div`
 	display: flex;
 	overflow-x: auto;
 	flex-wrap: nowrap;
+	@media(max-width: 890px) {
+		flex-basis: 100%;
+		flex-direction: column;
+		overflow-x: hidden;
+	}
 `
 
 export const PaginationStyles = styled.div`

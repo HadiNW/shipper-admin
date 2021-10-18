@@ -1,12 +1,19 @@
 import React from 'react'
-import { AccountStyles, HeaderStyles, Logo } from './HeaderStyles'
+import { AccountStyles, HamburgerStyle, HeaderStyles, Line, Logo, Container } from './HeaderStyles'
 import logoImg from '../../assets/logo.png'
 const Header = () => {
 	return (
 		<HeaderStyles>
-			<Logo>
-				<img className='logo' src={logoImg} alt="logo" />
-			</Logo>
+			<Container>
+				<HamburgerStyle>
+					<Line />
+					<Line />
+					<Line />
+				</HamburgerStyle>
+				<Logo>
+					<img className='logo' src={logoImg} alt="logo" />
+				</Logo>
+			</Container>
 			<AccountStyles>
 				<p className='user-greeting'>Hello, <span> Hadi</span></p>
 				<div className="user-icon-container">
