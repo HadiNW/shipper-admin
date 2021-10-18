@@ -19,18 +19,30 @@ export const HomeHeaderStyles = styled.div`
 		}
 	}
 	.right-header {
-		.search {
-			padding:  1rem .5rem;
-			position: relative;
+		display: flex;
+		align-items: center;
+		.input {
+			margin-right: 1rem;
+			display: flex;
+			align-items: center;
 			border: 1px solid var(--grey);
 			border-radius: .5rem;
+			color: var(--lightGrey);
+			font-size: 1.5rem;
+		}
+		.search-icon {
+			width: 2rem;
+			margin-left: 1rem;
+		}
+		.search {
+			padding:  1rem 0.5rem;
 			outline: none;
 			color: var(--lightGrey);
 			font-size: 1.5rem;
-			margin-right: 1rem;
+			border: none;
 		}
 		.add-button {
-			padding:  1rem .5rem;
+			padding:  1rem 0.5rem;
 			border: 1px solid var(--orange);
 			border-radius: .5rem;
 			font-size: 1.5rem;
@@ -41,6 +53,14 @@ export const HomeHeaderStyles = styled.div`
 			&:hover {
 				background-color: var(--lightOrange);
 			}
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.button-icon {
+				width: 2rem;
+				margin-left: 1rem;
+			}
+			
 		}
 	}
 `

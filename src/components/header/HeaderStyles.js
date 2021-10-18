@@ -22,7 +22,7 @@ export const AccountStyles = styled.div`
 
 	.user-greeting {
 		span {
-			color: blue;
+			color: var(--orange);
 		}
 	}
 
