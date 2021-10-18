@@ -79,6 +79,7 @@ export const CardText = styled.div`
 export const TextTitle = styled.p`
 	color: var(--grey);
 	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
 `
 export const TextContent = styled.p`
 	color: var(--black);

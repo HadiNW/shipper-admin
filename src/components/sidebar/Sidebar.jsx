@@ -1,11 +1,15 @@
+import { useContext } from 'react'
 import { useLocation } from 'react-router-dom'
+import SidebarContext from '../../store/sidebar-context'
 import { MenuItem, MenuList, SidebarStyles } from './SidebarStyles'
 
 const Sidebar = () => {
 	const location = useLocation()
+
+	const ctx = useContext(SidebarContext)
 	
 	return (
-		<SidebarStyles>
+		<SidebarStyles $showSidebar={ctx.showSidebar} onClick={ctx.changeShowSidebar}>
 			<MenuList>
 				<MenuItem to='/dashboard' $active={location.pathname === '/dashboard'}>
 					<svg

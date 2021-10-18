@@ -8,7 +8,6 @@ import {
 	CardText,
 	TextTitle,
 	TextContent,
-	CardContainer,
 } from './CardStyles'
 
 const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
@@ -46,7 +45,7 @@ const Card = ({ id, firstName, lastName, phone, email, avatar, dob }) => {
 					</CardText>
 					<CardText>
 						<TextTitle>Tanggal Lahir</TextTitle>
-						<TextContent>{dob}</TextContent>
+						<TextContent>{new Date(dob).toLocaleDateString()}</TextContent>
 					</CardText>
 				</div>
 			</CardContent>

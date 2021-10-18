@@ -1,11 +1,20 @@
-import React from 'react'
+import { useContext } from 'react'
 import { AccountStyles, HamburgerStyle, HeaderStyles, Line, Logo, Container } from './HeaderStyles'
 import logoImg from '../../assets/logo.png'
+import SidebarContext from '../../store/sidebar-context'
 const Header = () => {
+
+	const ctx = useContext(SidebarContext)
+
+	const handleSidebar = () => {
+		console.log('handle sidebar')
+		ctx.changeShowSidebar()
+	}
+
 	return (
 		<HeaderStyles>
 			<Container>
-				<HamburgerStyle>
+				<HamburgerStyle onClick={handleSidebar}>
 					<Line />
 					<Line />
 					<Line />

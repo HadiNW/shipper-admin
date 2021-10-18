@@ -5,7 +5,23 @@ export const SidebarStyles = styled.div`
 	flex-basis: 20%;
 	min-height: calc(100vh - 8rem);
 	@media(max-width: 890px) {
-		display: none;
+		display: ${props => props.$showSidebar ? 'block' : 'none'};
+		position: absolute;
+		top: 0;
+		left: 0%;
+		z-index: 100;
+		background-color: #fff;
+		width: 50%;
+		&::after {
+			content: '';
+			background-color: rgba(204, 204, 204, 0.308);
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: -10;
+		}
 	}
 `
 

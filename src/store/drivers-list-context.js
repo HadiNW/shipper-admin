@@ -16,7 +16,6 @@ const DriversListContext = createContext({
 export const DriversListProvider = (props) => {
 	const [drivers, setDerivers] = useState([])
 	const [shownDrivers, setShownDrivers] = useState([])
-	const [searchedDrivers, setSearchedDrivers] = useState([])
 	const [isFetching, setIsFetching] = useState(false)
 	const [error, setError] = useState(null)
 

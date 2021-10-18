@@ -24,7 +24,6 @@ const DriverList = ({ drivers }) => {
 	const isLast = (currPage * 5) >= totalData
 
 	const getNextPage = () => {
-		console.log(totalData - (currPage * 5))
 		if (isLast) return
 		let page = 2
 		if (currPage && currPage > 0) {
@@ -39,7 +38,6 @@ const DriverList = ({ drivers }) => {
 		if (page < 1) {
 			return
 		}
-		console.log(page)
 		history.push('/?page=' + page)
 	}
 	return (
@@ -48,7 +46,7 @@ const DriverList = ({ drivers }) => {
 				<DriverListContainer>
 					{drivers.slice(0,40).map((driver, i) => (
 						<Card
-							key={driver.id + driver.firstName}
+							key={driver.id || i + driver.firstName || i}
 							id={driver.id}
 							firstName={driver.firstName}
 							lastName={driver.lastName}
